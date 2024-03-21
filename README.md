@@ -1,6 +1,19 @@
 # Cadmus FeBo App
 
+Frontend app for Cadmus FeBo (_Federalism and Border Management in Greek Antiquity_).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+
+- [models](https://github.com/vedph/cadmus-febo)
+- [API](https://github.com/vedph/cadmus-febo-api)
+
+## Docker
+
+🐋 Quick Docker image build:
+
+1. `npm run build-lib`
+2. update version in `env.js` and `ng build`
+3. `docker build . -t vedph2020/cadmus-febo-app:0.0.1 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## Notes
 
