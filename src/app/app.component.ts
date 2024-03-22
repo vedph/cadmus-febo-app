@@ -40,6 +40,7 @@ import { CadmusThesaurusUiModule } from '@myrmidon/cadmus-thesaurus-ui';
 import { CadmusUiFlagsPickerModule } from '@myrmidon/cadmus-ui-flags-picker';
 
 import { MonacoWrapperModule } from './monaco-wrapper.module';
+import { MapglWrapperModule } from './mapgl-wrapper-module';
 
 @Component({
   selector: 'app-root',
@@ -52,6 +53,7 @@ import { MonacoWrapperModule } from './monaco-wrapper.module';
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
+    MapglWrapperModule,
     MonacoWrapperModule,
     // Cadmus
     CadmusRefsDocReferencesModule,
