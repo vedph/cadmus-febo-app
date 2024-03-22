@@ -8,6 +8,7 @@ import { EnvServiceProvider } from '@myrmidon/ng-tools';
 import { CadmusApiModule } from '@myrmidon/cadmus-api';
 
 import { provideMarkdown } from 'ngx-markdown';
+import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 
 import { routes } from './app.routes';
 
@@ -21,6 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(),
     provideMarkdown(),
+    importProvidersFrom(MonacoEditorModule.forRoot()),
     EnvServiceProvider,
     importProvidersFrom(CadmusApiModule),
     // parts and fragments type IDs to editor group keys mappings

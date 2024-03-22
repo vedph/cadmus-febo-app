@@ -15,6 +15,9 @@ import {
   GravatarService,
 } from '@myrmidon/auth-jwt-login';
 
+// leaflet
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+
 // Cadmus bricks
 import { CadmusRefsAssertedIdsModule } from '@myrmidon/cadmus-refs-asserted-ids';
 import { CadmusRefsDocReferencesModule } from '@myrmidon/cadmus-refs-doc-references';
@@ -39,9 +42,6 @@ import { CadmusThesaurusListModule } from '@myrmidon/cadmus-thesaurus-list';
 import { CadmusThesaurusUiModule } from '@myrmidon/cadmus-thesaurus-ui';
 import { CadmusUiFlagsPickerModule } from '@myrmidon/cadmus-ui-flags-picker';
 
-import { MonacoWrapperModule } from './monaco-wrapper.module';
-import { MapglWrapperModule } from './mapgl-wrapper-module';
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -53,8 +53,7 @@ import { MapglWrapperModule } from './mapgl-wrapper-module';
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
-    MapglWrapperModule,
-    MonacoWrapperModule,
+    LeafletModule,
     // Cadmus
     CadmusRefsDocReferencesModule,
     CadmusRefsHistoricalDateModule,
