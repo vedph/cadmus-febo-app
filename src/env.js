@@ -7,5 +7,4 @@
   window.__env.version = "0.0.1";
   // enable thesaurus import in thesaurus list for admins
   window.__env.thesImportEnabled = true;
-  window.__env.mapboxToken = "pk.eyJ1IjoibmFmdGlzIiwiYSI6ImNrcGh6Mzd3dzA5dTUyb29mMmp1YmgzNm4ifQ.5xIgNTzWYwf8MchLs_4KOA";
 })(this);
