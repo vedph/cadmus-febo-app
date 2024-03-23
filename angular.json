@@ -39,7 +39,7 @@
               "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": ["rangy", "diff-match-patch"]
+            "allowedCommonJsDependencies": ["diff-match-patch"]
           },
           "configurations": {
             "production": {
