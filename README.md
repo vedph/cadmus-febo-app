@@ -26,3 +26,11 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 ```
 
 - [ngx-mapbox-gl](https://github.com/Wykks/ngx-mapbox-gl)
+
+## History
+
+- 2024-04-11: updated Angular.
+
+### 0.0.1
+
+- initial release.
