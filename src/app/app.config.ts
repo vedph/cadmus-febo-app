@@ -3,6 +3,8 @@ import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+import { provideNativeDateAdapter } from '@angular/material/core';
+
 import { AuthJwtInterceptor } from '@myrmidon/auth-jwt-login';
 import { EnvServiceProvider } from '@myrmidon/ng-tools';
 import { CadmusApiModule } from '@myrmidon/cadmus-api';
@@ -22,6 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(),
     provideMarkdown(),
+    provideNativeDateAdapter(),
     importProvidersFrom(MonacoEditorModule.forRoot()),
     EnvServiceProvider,
     importProvidersFrom(CadmusApiModule),
