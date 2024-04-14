@@ -9,8 +9,8 @@ import { AuthJwtInterceptor } from '@myrmidon/auth-jwt-login';
 import { EnvServiceProvider } from '@myrmidon/ng-tools';
 import { CadmusApiModule } from '@myrmidon/cadmus-api';
 
-import { provideMarkdown } from 'ngx-markdown';
-import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
+import { NgeMonacoModule } from '@cisstech/nge/monaco';
+import { NgeMarkdownModule } from '@cisstech/nge/markdown';
 
 import { routes } from './app.routes';
 
@@ -23,9 +23,9 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimationsAsync(),
     provideHttpClient(),
-    provideMarkdown(),
     provideNativeDateAdapter(),
-    importProvidersFrom(MonacoEditorModule.forRoot()),
+    importProvidersFrom(NgeMonacoModule.forRoot({})),
+    importProvidersFrom(NgeMarkdownModule),
     EnvServiceProvider,
     importProvidersFrom(CadmusApiModule),
     // parts and fragments type IDs to editor group keys mappings

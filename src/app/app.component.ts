@@ -8,6 +8,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+// vendor
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+
+// myrmidon
 import { EnvService, EnvServiceProvider } from '@myrmidon/ng-tools';
 import {
   User,
@@ -15,14 +19,16 @@ import {
   GravatarService,
 } from '@myrmidon/auth-jwt-login';
 
-// leaflet
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+// bricks
+import { AssertedCompositeIdsComponent } from '@myrmidon/cadmus-refs-asserted-ids';
+import { DocReferencesComponent } from '@myrmidon/cadmus-refs-doc-references';
+import {
+  HistoricalDateComponent,
+  HistoricalDatePipe,
+} from '@myrmidon/cadmus-refs-historical-date';
+import { FlagsPickerComponent } from '@myrmidon/cadmus-ui-flags-picker';
 
-// Cadmus bricks
-import { CadmusRefsAssertedIdsModule } from '@myrmidon/cadmus-refs-asserted-ids';
-import { CadmusRefsDocReferencesModule } from '@myrmidon/cadmus-refs-doc-references';
-import { CadmusRefsHistoricalDateModule } from '@myrmidon/cadmus-refs-historical-date';
-// Cadmus
+// cadmus
 import {
   CadmusCoreModule,
   Thesaurus,
@@ -40,7 +46,6 @@ import { CadmusItemSearchModule } from '@myrmidon/cadmus-item-search';
 import { CadmusThesaurusEditorModule } from '@myrmidon/cadmus-thesaurus-editor';
 import { CadmusThesaurusListModule } from '@myrmidon/cadmus-thesaurus-list';
 import { CadmusThesaurusUiModule } from '@myrmidon/cadmus-thesaurus-ui';
-import { CadmusUiFlagsPickerModule } from '@myrmidon/cadmus-ui-flags-picker';
 
 @Component({
   selector: 'app-root',
@@ -55,9 +60,11 @@ import { CadmusUiFlagsPickerModule } from '@myrmidon/cadmus-ui-flags-picker';
     MatToolbarModule,
     LeafletModule,
     // Cadmus
-    CadmusRefsDocReferencesModule,
-    CadmusRefsHistoricalDateModule,
-    CadmusRefsAssertedIdsModule,
+    DocReferencesComponent,
+    HistoricalDateComponent,
+    HistoricalDatePipe,
+    AssertedCompositeIdsComponent,
+    FlagsPickerComponent,
     CadmusCoreModule,
     CadmusProfileCoreModule,
     CadmusStateModule,
@@ -71,7 +78,6 @@ import { CadmusUiFlagsPickerModule } from '@myrmidon/cadmus-ui-flags-picker';
     CadmusThesaurusEditorModule,
     CadmusThesaurusListModule,
     CadmusThesaurusUiModule,
-    CadmusUiFlagsPickerModule,
   ],
   providers: [EnvServiceProvider],
   templateUrl: './app.component.html',
