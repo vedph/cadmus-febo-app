@@ -32,8 +32,7 @@ services:
     image: vedph2020/cadmus-febo-api:0.0.2
     container_name: cadmus-febo-api
     ports:
-      # TODO: change 5080 with your API port in the host
-      - 5080:80
+      - 5105:8080
     depends_on:
       - cadmus-febo-mongo
       - cadmus-febo-pgsql
