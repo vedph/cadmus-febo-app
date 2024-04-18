@@ -11,9 +11,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 🐋 Quick Docker image build:
 
-1. `npm run build-lib`
-2. update version in `env.js` and `ng build`
-3. `docker build . -t vedph2020/cadmus-febo-app:0.0.1 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
+1. update version in `env.js` and `ng build`
+2. `docker build . -t vedph2020/cadmus-febo-app:0.0.2 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## Notes
 
@@ -29,6 +28,9 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+### 0.0.2
+
+- 2024-04-18: fixed missing events config in part editor keys.
 - 2024-04-14: ⚠️ upgraded to [bricks V2](https://github.com/vedph/cadmus-bricks-shell-v2).
 - 2024-04-11: updated Angular.
 

@@ -14,6 +14,7 @@ import {
   TOKEN_TEXT_PART_TYPEID,
   PIN_LINKS_PART_TYPEID,
   PIN_LINKS_FRAGMENT_TYPEID,
+  HISTORICAL_EVENTS_PART_TYPEID,
 } from '@myrmidon/cadmus-part-general-ui';
 import {
   APPARATUS_FRAGMENT_TYPEID,
@@ -57,6 +58,9 @@ export const PART_EDITOR_KEYS: PartEditorKeys = {
     part: GENERAL,
   },
   [HISTORICAL_DATE_PART_TYPEID]: {
+    part: GENERAL,
+  },
+  [HISTORICAL_EVENTS_PART_TYPEID]: {
     part: GENERAL,
   },
   [INDEX_KEYWORDS_PART_TYPEID]: {

@@ -4,6 +4,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 RUN rm /etc/nginx/conf.d/default.conf
 
 WORKDIR /usr/share/nginx/html
-COPY dist/browser/cadmus-febo-app/ .
+COPY dist/cadmus-febo-app/browser/ .
 
 EXPOSE 80
