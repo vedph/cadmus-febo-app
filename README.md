@@ -28,6 +28,8 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-05-02: added text editors plugins support.
+
 ### 0.0.2
 
 - 2024-04-18: fixed missing events config in part editor keys.

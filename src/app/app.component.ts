@@ -12,7 +12,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 // myrmidon
-import { EnvService, EnvServiceProvider } from '@myrmidon/ng-tools';
+import {
+  EnvService,
+  EnvServiceProvider,
+  RamStorageService,
+} from '@myrmidon/ng-tools';
 import {
   User,
   AuthJwtService,
@@ -20,13 +24,18 @@ import {
 } from '@myrmidon/auth-jwt-login';
 
 // bricks
-import { AssertedCompositeIdsComponent } from '@myrmidon/cadmus-refs-asserted-ids';
+import {
+  ASSERTED_COMPOSITE_ID_CONFIGS_KEY,
+  AssertedCompositeIdsComponent,
+} from '@myrmidon/cadmus-refs-asserted-ids';
 import { DocReferencesComponent } from '@myrmidon/cadmus-refs-doc-references';
 import {
   HistoricalDateComponent,
   HistoricalDatePipe,
 } from '@myrmidon/cadmus-refs-historical-date';
 import { FlagsPickerComponent } from '@myrmidon/cadmus-ui-flags-picker';
+import { ViafRefLookupService } from '@myrmidon/cadmus-refs-viaf-lookup';
+import { GeoNamesRefLookupService } from '@myrmidon/cadmus-refs-geonames-lookup';
 
 // cadmus
 import {
@@ -46,6 +55,7 @@ import { CadmusItemSearchModule } from '@myrmidon/cadmus-item-search';
 import { CadmusThesaurusEditorModule } from '@myrmidon/cadmus-thesaurus-editor';
 import { CadmusThesaurusListModule } from '@myrmidon/cadmus-thesaurus-list';
 import { CadmusThesaurusUiModule } from '@myrmidon/cadmus-thesaurus-ui';
+import { RefLookupConfig } from '@myrmidon/cadmus-refs-lookup';
 
 @Component({
   selector: 'app-root',
@@ -98,10 +108,36 @@ export class AppComponent implements OnInit, OnDestroy {
     private _gravatarService: GravatarService,
     private _appRepository: AppRepository,
     private _router: Router,
-    env: EnvService
+    env: EnvService,
+    // lookup
+    storage: RamStorageService,
+    viaf: ViafRefLookupService,
+    geonames: GeoNamesRefLookupService
   ) {
     this.version = env.get('version') || '';
     this._subs = [];
+
+    // configure external lookup for asserted composite IDs
+    storage.store(ASSERTED_COMPOSITE_ID_CONFIGS_KEY, [
+      {
+        name: 'VIAF',
+        iconUrl: '/assets/img/viaf128.png',
+        description: 'Virtual International Authority File',
+        label: 'ID',
+        service: viaf,
+        itemIdGetter: (item: any) => item?.viafid,
+        itemLabelGetter: (item: any) => item?.term,
+      },
+      {
+        name: 'geonames',
+        iconUrl: '/assets/img/geonames128.png',
+        description: 'GeoNames',
+        label: 'ID',
+        service: geonames,
+        itemIdGetter: (item: any) => item?.geonameId,
+        itemLabelGetter: (item: any) => item?.name,
+      },
+    ] as RefLookupConfig[]);
   }
 
   ngOnInit(): void {
