@@ -21,17 +21,18 @@ import {
 } from '@myrmidon/cadmus-text-ed';
 import {
   MdBoldCtePlugin,
-  MdEmojiCtePlugin,
   MdItalicCtePlugin,
   MdLinkCtePlugin,
 } from '@myrmidon/cadmus-text-ed-md';
+import { TxtEmojiCtePlugin } from '@myrmidon/cadmus-text-ed-txt';
+import { GEONAMES_USERNAME_TOKEN } from '@myrmidon/cadmus-refs-geonames-lookup';
+import { PROXY_INTERCEPTOR_OPTIONS } from '@myrmidon/cadmus-refs-lookup';
 
 import { routes } from './app.routes';
 
 import { INDEX_LOOKUP_DEFINITIONS } from './index-lookup-definitions';
 import { ITEM_BROWSER_KEYS } from './item-browser-keys';
 import { PART_EDITOR_KEYS } from './part-editor-keys';
-import { GEONAMES_USERNAME_TOKEN } from '@myrmidon/cadmus-refs-geonames-lookup';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -71,7 +72,7 @@ export const appConfig: ApplicationConfig = {
     // text editing plugins
     MdBoldCtePlugin,
     MdItalicCtePlugin,
-    MdEmojiCtePlugin,
+    TxtEmojiCtePlugin,
     MdLinkCtePlugin,
     // provide a factory so that plugins can be instantiated via DI
     {
@@ -79,14 +80,14 @@ export const appConfig: ApplicationConfig = {
       useFactory: (
         mdBoldCtePlugin: MdBoldCtePlugin,
         mdItalicCtePlugin: MdItalicCtePlugin,
-        mdEmojiCtePlugin: MdEmojiCtePlugin,
+        txtEmojiCtePlugin: TxtEmojiCtePlugin,
         mdLinkCtePlugin: MdLinkCtePlugin
       ) => {
         return {
           plugins: [
             mdBoldCtePlugin,
             mdItalicCtePlugin,
-            mdEmojiCtePlugin,
+            txtEmojiCtePlugin,
             mdLinkCtePlugin,
           ],
         };
@@ -94,7 +95,7 @@ export const appConfig: ApplicationConfig = {
       deps: [
         MdBoldCtePlugin,
         MdItalicCtePlugin,
-        MdEmojiCtePlugin,
+        TxtEmojiCtePlugin,
         MdLinkCtePlugin,
       ],
     },
@@ -108,7 +109,7 @@ export const appConfig: ApplicationConfig = {
       useValue: {
         2080: 'md.bold', // Ctrl+B
         2087: 'md.italic', // Ctrl+I
-        2083: 'md.emoji', // Ctrl+E
+        2083: 'txt.emoji', // Ctrl+E
         2090: 'md.link', // Ctrl+L
       },
     },
@@ -116,6 +117,17 @@ export const appConfig: ApplicationConfig = {
     {
       provide: GEONAMES_USERNAME_TOKEN,
       useValue: 'myrmex',
+    },
+    // proxy
+    {
+      provide: PROXY_INTERCEPTOR_OPTIONS,
+      useValue: {
+        proxyUrl: (window as any).__env?.apiUrl + 'proxy',
+        urls: [
+          'http://lookup.dbpedia.org/api/search',
+          'http://lookup.dbpedia.org/api/prefix',
+        ],
+      },
     },
   ],
 };

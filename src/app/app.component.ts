@@ -35,6 +35,7 @@ import {
 } from '@myrmidon/cadmus-refs-historical-date';
 import { FlagsPickerComponent } from '@myrmidon/cadmus-ui-flags-picker';
 import { ViafRefLookupService } from '@myrmidon/cadmus-refs-viaf-lookup';
+import { DbpediaRefLookupService } from '@myrmidon/cadmus-refs-dbpedia-lookup';
 import { GeoNamesRefLookupService } from '@myrmidon/cadmus-refs-geonames-lookup';
 
 // cadmus
@@ -112,6 +113,7 @@ export class AppComponent implements OnInit, OnDestroy {
     // lookup
     storage: RamStorageService,
     viaf: ViafRefLookupService,
+    dbpedia: DbpediaRefLookupService,
     geonames: GeoNamesRefLookupService
   ) {
     this.version = env.get('version') || '';
@@ -127,6 +129,15 @@ export class AppComponent implements OnInit, OnDestroy {
         service: viaf,
         itemIdGetter: (item: any) => item?.viafid,
         itemLabelGetter: (item: any) => item?.term,
+      },
+      {
+        name: 'DBpedia',
+        iconUrl: '/assets/img/dbpedia128.png',
+        description: 'DBpedia',
+        label: 'ID',
+        service: dbpedia,
+        itemIdGetter: (item: any) => item?.uri,
+        itemLabelGetter: (item: any) => item?.label,
       },
       {
         name: 'geonames',
