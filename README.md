@@ -28,6 +28,9 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-05-24:
+  - ⚠️ updated to Angular 18.
+  - updated packages.
 - 2024-05-02: added text editors plugins support.
 
 ### 0.0.2

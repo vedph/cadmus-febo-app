@@ -1,5 +1,9 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptors,
+  withJsonpSupport,
+} from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
@@ -8,7 +12,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { NgeMonacoModule } from '@cisstech/nge/monaco';
 import { NgeMarkdownModule } from '@cisstech/nge/markdown';
 
-import { AuthJwtInterceptor } from '@myrmidon/auth-jwt-login';
+import { authJwtInterceptor } from '@myrmidon/auth-jwt-login';
 import { EnvServiceProvider } from '@myrmidon/ng-tools';
 import { CadmusApiModule } from '@myrmidon/cadmus-api';
 import {
@@ -34,7 +38,10 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideAnimationsAsync(),
-    provideHttpClient(withJsonpSupport(), withInterceptorsFromDi()),
+    provideHttpClient(
+      withJsonpSupport(),
+      withInterceptors([authJwtInterceptor])
+    ),
     provideNativeDateAdapter(),
     importProvidersFrom(NgeMonacoModule.forRoot({})),
     importProvidersFrom(NgeMarkdownModule),
@@ -60,11 +67,11 @@ export const appConfig: ApplicationConfig = {
     },
     // HTTP interceptor
     // https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthJwtInterceptor,
-      multi: true,
-    },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthJwtInterceptor,
+    //   multi: true,
+    // },
     // text editing plugins
     MdBoldCtePlugin,
     MdItalicCtePlugin,
