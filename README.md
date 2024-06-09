@@ -28,6 +28,9 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-06-09:
+  - updated Angular and packages.
+  - applied [M3 theme](https://material.angular.io/guide/theming).
 - 2024-05-24:
   - ⚠️ updated to Angular 18.
   - updated packages.
