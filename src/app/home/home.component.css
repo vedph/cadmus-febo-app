@@ -12,7 +12,8 @@ h2 {
   text-align: center;
 }
 article {
-  margin: 8px;
+  margin: 16px 24px;
   column-width: 800px;
   column-gap: 24px;
+  text-align: justify;
 }
