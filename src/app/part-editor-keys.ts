@@ -26,7 +26,9 @@ import { ASSERTED_LOCATIONS_PART_TYPEID } from '@myrmidon/cadmus-part-geo-assert
 import { ASSERTED_TOPONYMS_PART_TYPEID } from '@myrmidon/cadmus-part-geo-asserted-toponyms';
 
 import { EPI_SUPPORT_PART_TYPEID } from '@myrmidon/cadmus-part-epigraphy-support';
+import { EPI_SUPPORT_FRR_PART_TYPEID } from '@myrmidon/cadmus-part-epigraphy-support-frr';
 import { EPI_WRITING_PART_TYPEID } from '@myrmidon/cadmus-part-epigraphy-writing';
+import { EPI_SIGNS_PART_TYPEID } from '@myrmidon/cadmus-part-epigraphy-signs';
 
 const GENERAL = 'general';
 const PHILOLOGY = 'philology';
@@ -92,7 +94,13 @@ export const PART_EDITOR_KEYS: PartEditorKeys = {
   [EPI_SUPPORT_PART_TYPEID]: {
     part: EPIGRAPHY,
   },
+  [EPI_SUPPORT_FRR_PART_TYPEID]: {
+    part: EPIGRAPHY,
+  },
   [EPI_WRITING_PART_TYPEID]: {
+    part: EPIGRAPHY,
+  },
+  [EPI_SIGNS_PART_TYPEID]: {
     part: EPIGRAPHY,
   },
   // layer parts
