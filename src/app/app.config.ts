@@ -26,6 +26,7 @@ import {
 } from '@myrmidon/cadmus-text-ed-md';
 import { TxtEmojiCtePlugin } from '@myrmidon/cadmus-text-ed-txt';
 import { GEONAMES_USERNAME_TOKEN } from '@myrmidon/cadmus-refs-geonames-lookup';
+import { WHG_USERNAME_TOKEN } from '@myrmidon/cadmus-refs-whg-lookup';
 import { PROXY_INTERCEPTOR_OPTIONS } from '@myrmidon/cadmus-refs-lookup';
 
 import { routes } from './app.routes';
@@ -119,6 +120,10 @@ export const appConfig: ApplicationConfig = {
     // GeoNames lookup (see environment.prod.ts for the username)
     {
       provide: GEONAMES_USERNAME_TOKEN,
+      useValue: 'myrmex',
+    },
+    {
+      provide: WHG_USERNAME_TOKEN,
       useValue: 'myrmex',
     },
     // proxy
