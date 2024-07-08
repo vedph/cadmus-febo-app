@@ -28,6 +28,7 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-07-08: updated Angular and packages.
 - 2024-06-30:
   - updated Angular and packages.
   - added WHG lookup.
