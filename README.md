@@ -28,6 +28,9 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-07-19:
+  - updated packages.
+  - [refactored Gravatar](https://myrmex.github.io/overview/cadmus/dev/history/f-gravatar/).
 - 2024-07-15: updated packages.
 - 2024-07-08: updated Angular and packages.
 - 2024-06-30:

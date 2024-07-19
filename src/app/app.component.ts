@@ -21,6 +21,7 @@ import {
   User,
   AuthJwtService,
   GravatarService,
+  AuthJwtLoginModule,
 } from '@myrmidon/auth-jwt-login';
 
 // bricks
@@ -90,6 +91,7 @@ import { GeoJsonFeature, WhgRefLookupService } from '@myrmidon/cadmus-refs-whg-l
     CadmusThesaurusEditorModule,
     CadmusThesaurusListModule,
     CadmusThesaurusUiModule,
+    AuthJwtLoginModule
   ],
   providers: [EnvServiceProvider],
   templateUrl: './app.component.html',
@@ -193,10 +195,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public getItemBrowserRoute(id: string): string {
     return this._itemBrowserKeys[id] || id;
-  }
-
-  public getGravatarUrl(email: string, size = 80): string | null {
-    return this._gravatarService.buildGravatarUrl(email, size);
   }
 
   public logout(): void {

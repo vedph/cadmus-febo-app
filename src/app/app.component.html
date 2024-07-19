@@ -20,8 +20,7 @@
         mat-menu-item
         *ngFor="let entry of itemBrowsers"
         [routerLink]="'item-browser/' + getItemBrowserRoute(entry.id)"
-        ></a
-      >
+      ></a>
     </mat-menu>
     <!-- item menu -->
     <ng-container *ngIf="logged && !itemBrowsers">
@@ -54,7 +53,7 @@
       <!-- indicators -->
       <img
         alt="avatar"
-        [src]="getGravatarUrl(user.email, 32)"
+        [src]="user.email | gravatar : 32"
         [alt]="user.userName"
       />
       <mat-icon
@@ -74,13 +73,16 @@
       </button> -->
 
       <!-- user menu -->
-      <button type="button" mat-button [matMenuTriggerFor]="userMenu">User</button>
+      <button type="button" mat-button [matMenuTriggerFor]="userMenu">
+        User
+      </button>
       <mat-menu #userMenu>
         <a mat-menu-item routerLink="/reset-password">Reset password</a>
       </mat-menu>
 
       <!-- admin menu -->
-      <button type="button"
+      <button
+        type="button"
         *ngIf="user && user.roles.includes('admin')"
         mat-button
         [matMenuTriggerFor]="adminMenu"
@@ -115,7 +117,7 @@
       <a rel="noopener" href="http://www.fusisoft.it" target="_blank"
         >Daniele Fusi</a
       >
-      - version {{version}}
+      - version {{ version }}
     </p>
   </div>
 </footer>
