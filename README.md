@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 🐋 Quick Docker image build:
 
 1. update version in `env.js` and `ng build`.
-2. `docker build . -t vedph2020/cadmus-febo-app:0.0.2 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
+2. `docker build . -t vedph2020/cadmus-febo-app:0.0.3 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## Notes
 
@@ -27,6 +27,8 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 - [ngx-mapbox-gl](https://github.com/Wykks/ngx-mapbox-gl)
 
 ## History
+
+### 0.0.3
 
 - 2024-07-19:
   - updated packages.
