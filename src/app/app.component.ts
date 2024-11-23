@@ -73,11 +73,6 @@ import { GeoJsonFeature, WhgRefLookupService } from '@myrmidon/cadmus-refs-whg-l
     MatToolbarModule,
     LeafletModule,
     // Cadmus
-    DocReferencesComponent,
-    HistoricalDateComponent,
-    HistoricalDatePipe,
-    AssertedCompositeIdsComponent,
-    FlagsPickerComponent,
     CadmusCoreModule,
     CadmusProfileCoreModule,
     CadmusStateModule,
