@@ -28,6 +28,8 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-11-30: updated packages.
+
 ### 1.0.1
 
 - 2024-11-29: M3 theme.
