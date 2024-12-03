@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { AuthJwtAdminModule } from '@myrmidon/auth-jwt-admin';
+import { UserListComponent } from '@myrmidon/auth-jwt-admin';
 
 @Component({
   selector: 'app-manage-users-page',
@@ -27,7 +27,7 @@ import { AuthJwtAdminModule } from '@myrmidon/auth-jwt-admin';
     MatInputModule,
     MatProgressBarModule,
     MatTooltipModule,
-    AuthJwtAdminModule,
+    UserListComponent,
   ],
 })
 export class ManageUsersPageComponent implements OnInit {
