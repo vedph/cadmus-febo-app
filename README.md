@@ -28,6 +28,8 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-12-05: updated Angular and packages.
+
 ### 2.0.0
 
 - 2024-12-03: ⚠️ upgraded to new core dependencies.
