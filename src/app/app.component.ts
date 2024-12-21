@@ -12,11 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 // myrmidon
-import {
-  EnvService,
-  EnvServiceProvider,
-  RamStorageService,
-} from '@myrmidon/ngx-tools';
+import { EnvService, RamStorageService } from '@myrmidon/ngx-tools';
 import {
   User,
   AuthJwtService,
@@ -83,7 +79,6 @@ import {
     CadmusThesaurusListModule,
     CadmusThesaurusUiModule,
   ],
-  providers: [EnvServiceProvider],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

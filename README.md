@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 🐋 Quick Docker image build:
 
 1. update version in `env.js` and `ng build`.
-2. `docker build . -t vedph2020/cadmus-febo-app:1.0.1 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
+2. `docker build . -t vedph2020/cadmus-febo-app:2.0.2 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## Notes
 
@@ -28,6 +28,13 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+### 2.0.2
+
+- 2024-12-21: updated packages removing `EnvServiceProvider`.
+
+### 2.0.1
+
+- 2024-12-21: updated Angular.
 - 2024-12-16: updated Angular.
 - 2024-12-12: updated Angular.
 - 2024-12-05: updated Angular and packages.
