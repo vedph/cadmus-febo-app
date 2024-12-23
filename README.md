@@ -28,6 +28,8 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2024-12-23: ⚠️ upgraded to bricks V3.
+
 ### 2.0.2
 
 - 2024-12-21: updated packages removing `EnvServiceProvider`.
