@@ -28,6 +28,7 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2025-01-01: ⚠️ upgraded to standalone packages for epigraphy and geography.
 - 2024-12-23: ⚠️ upgraded to bricks V3.
 
 ### 2.0.2
