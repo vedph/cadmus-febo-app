@@ -1,6 +1,6 @@
 # Cadmus FeBo App
 
-Frontend app for Cadmus FeBo (_Federalism and Border Management in Greek Antiquity_).
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
@@ -28,7 +28,11 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
-- 2025-01-01: ⚠️ upgraded to standalone packages for epigraphy and geography.
+### 3.0.0
+
+- 2025-01-01:
+  - ⚠️ upgraded to standalone packages for epigraphy and geography.
+  - refactored app for modern Angular.
 - 2024-12-23: ⚠️ upgraded to bricks V3.
 
 ### 2.0.2
