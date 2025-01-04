@@ -13,12 +13,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 // myrmidon
 import { EnvService, RamStorageService } from '@myrmidon/ngx-tools';
-import {
-  User,
-  AuthJwtService,
-  GravatarService,
-  GravatarPipe,
-} from '@myrmidon/auth-jwt-login';
+import { User, AuthJwtService, GravatarPipe } from '@myrmidon/auth-jwt-login';
 
 // bricks
 import { ASSERTED_COMPOSITE_ID_CONFIGS_KEY } from '@myrmidon/cadmus-refs-asserted-ids';
@@ -27,23 +22,8 @@ import { DbpediaRefLookupService } from '@myrmidon/cadmus-refs-dbpedia-lookup';
 import { GeoNamesRefLookupService } from '@myrmidon/cadmus-refs-geonames-lookup';
 
 // cadmus
-import {
-  CadmusCoreModule,
-  Thesaurus,
-  ThesaurusEntry,
-} from '@myrmidon/cadmus-core';
-import { CadmusGraphPgModule } from '@myrmidon/cadmus-graph-pg';
-import { CadmusGraphUiModule } from '@myrmidon/cadmus-graph-ui';
-import { CadmusProfileCoreModule } from '@myrmidon/cadmus-profile-core';
-import { AppRepository, CadmusStateModule } from '@myrmidon/cadmus-state';
-import { CadmusUiModule } from '@myrmidon/cadmus-ui';
-import { CadmusUiPgModule } from '@myrmidon/cadmus-ui-pg';
-import { CadmusItemEditorModule } from '@myrmidon/cadmus-item-editor';
-import { CadmusItemListModule } from '@myrmidon/cadmus-item-list';
-import { CadmusItemSearchModule } from '@myrmidon/cadmus-item-search';
-import { CadmusThesaurusEditorModule } from '@myrmidon/cadmus-thesaurus-editor';
-import { CadmusThesaurusListModule } from '@myrmidon/cadmus-thesaurus-list';
-import { CadmusThesaurusUiModule } from '@myrmidon/cadmus-thesaurus-ui';
+import { Thesaurus, ThesaurusEntry } from '@myrmidon/cadmus-core';
+import { AppRepository } from '@myrmidon/cadmus-state';
 import { RefLookupConfig } from '@myrmidon/cadmus-refs-lookup';
 import {
   GeoJsonFeature,
@@ -64,20 +44,6 @@ import {
     LeafletModule,
     // myrmidon
     GravatarPipe,
-    // Cadmus
-    CadmusCoreModule,
-    CadmusProfileCoreModule,
-    CadmusStateModule,
-    CadmusUiModule,
-    CadmusUiPgModule,
-    CadmusGraphPgModule,
-    CadmusGraphUiModule,
-    CadmusItemEditorModule,
-    CadmusItemListModule,
-    CadmusItemSearchModule,
-    CadmusThesaurusEditorModule,
-    CadmusThesaurusListModule,
-    CadmusThesaurusUiModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -94,7 +60,6 @@ export class AppComponent implements OnInit, OnDestroy {
     @Inject('itemBrowserKeys')
     private _itemBrowserKeys: { [key: string]: string },
     private _authService: AuthJwtService,
-    private _gravatarService: GravatarService,
     private _appRepository: AppRepository,
     private _router: Router,
     env: EnvService,

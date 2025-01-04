@@ -17,7 +17,6 @@ import { NgeMonacoModule } from '@cisstech/nge/monaco';
 import { NgeMarkdownModule } from '@cisstech/nge/markdown';
 
 import { authJwtInterceptor } from '@myrmidon/auth-jwt-login';
-import { CadmusApiModule } from '@myrmidon/cadmus-api';
 import {
   CADMUS_TEXT_ED_BINDINGS_TOKEN,
   CADMUS_TEXT_ED_SERVICE_OPTIONS_TOKEN,
@@ -50,7 +49,6 @@ export const appConfig: ApplicationConfig = {
     provideNativeDateAdapter(),
     importProvidersFrom(NgeMonacoModule.forRoot({})),
     importProvidersFrom(NgeMarkdownModule),
-    importProvidersFrom(CadmusApiModule),
     // parts and fragments type IDs to editor group keys mappings
     // https://github.com/nrwl/nx/issues/208#issuecomment-384102058
     // inject like: @Inject('partEditorKeys') partEditorKeys: PartEditorKeys
