@@ -30,6 +30,7 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ### 4.0.0
 
+- 2025-01-19: updated Angular and packages.
 - 2025-01-04: ⚠️ updated [Cadmus dependencies](https://github.com/vedph/cadmus-shell-v3) to version 11 (standalone components).
 
 ### 3.0.0
