@@ -71,6 +71,7 @@
     "@myrmidon/cadmus-refs-viaf-lookup": "^10.0.2",
     "@myrmidon/cadmus-refs-whg-lookup": "^10.0.0",
     "@myrmidon/cadmus-state": "^14.0.0",
+    "@myrmidon/cadmus-statistics": "^1.0.0",
     "@myrmidon/cadmus-text-block-view": "^9.0.1",
     "@myrmidon/cadmus-text-ed": "^9.0.1",
     "@myrmidon/cadmus-text-ed-md": "^10.0.3",
