@@ -28,6 +28,11 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2025-09-23:
+  - updated Angular and packages.
+  - ⚠️ updated libraries after their full-reactivity refactoring.
+  - updated guards and routes.
+  - removed JSONP and legacy animations provider in configuration.
 - 2025-06-07: updated Angular and packages.
 - 2025-06-03: ⚠️ upgraded to Angular 20.
 
