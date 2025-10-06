@@ -28,6 +28,7 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2025-10-06: updated Angular and packages.
 - 2025-09-25:
   - updated packages.
   - removed `diff-match-patch`.

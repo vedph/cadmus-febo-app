@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { jwtGuard, jwtAdminGuard } from '@myrmidon/auth-jwt-login';
-import { editorGuard, EditorGuardService } from '@myrmidon/cadmus-api';
+import { editorGuard } from '@myrmidon/cadmus-api';
 import { pendingChangesGuard } from '@myrmidon/cadmus-core';
 
 import { HomeComponent } from './home/home.component';
@@ -85,7 +85,7 @@ export const routes: Routes = [
     path: 'items/:iid/general',
     loadChildren: () =>
       import('@myrmidon/cadmus-part-general-pg').then(
-        (module) => module.CADMUS_PART_GENERAL_ROUTES
+        (module) => module.CADMUS_PART_GENERAL_PG_ROUTES
       ),
     canActivate: [jwtGuard],
   },
