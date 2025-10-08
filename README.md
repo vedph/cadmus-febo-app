@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 🐋 Quick Docker image build:
 
 1. update version in `env.js` and `ng build --configuration production`.
-2. `docker build . -t vedph2020/cadmus-febo-app:5.0.0 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
+2. `docker build . -t vedph2020/cadmus-febo-app:5.0.1 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## Notes
 
@@ -28,6 +28,11 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+### 5.0.1
+
+- 2025-10-08:
+  - updated packages.
+  - added lookup definitions.
 - 2025-10-06: updated Angular and packages.
 - 2025-09-25:
   - updated packages.
