@@ -9,7 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 // vendor
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LeafletModule } from '@bluehalo/ngx-leaflet';
 
 // myrmidon
 import { EnvService, RamStorageService } from '@myrmidon/ngx-tools';
