@@ -2,8 +2,6 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
-
 - [models](https://github.com/vedph/cadmus-febo)
 - [API](https://github.com/vedph/cadmus-febo-api)
 
