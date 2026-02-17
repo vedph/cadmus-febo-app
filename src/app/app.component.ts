@@ -8,9 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-// vendor
-import { LeafletModule } from '@bluehalo/ngx-leaflet';
-
 // myrmidon
 import { EnvService, RamStorageService } from '@myrmidon/ngx-tools';
 import { User, AuthJwtService, GravatarPipe } from '@myrmidon/auth-jwt-login';
@@ -42,7 +39,6 @@ import {
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,
-    LeafletModule,
     GravatarPipe,
   ],
   templateUrl: './app.component.html',
@@ -68,7 +64,7 @@ export class AppComponent implements OnInit, OnDestroy {
     viaf: ViafRefLookupService,
     dbpedia: DbpediaRefLookupService,
     geonames: GeoNamesRefLookupService,
-    whg: WhgRefLookupService
+    whg: WhgRefLookupService,
   ) {
     this.version = env.get('version') || '';
     this._subs = [];
@@ -125,15 +121,15 @@ export class AppComponent implements OnInit, OnDestroy {
         if (user) {
           this._appRepository.load();
         }
-      })
+      }),
     );
 
     this._subs.push(
       this._appRepository.itemBrowserThesaurus$.subscribe(
         (thesaurus: Thesaurus | undefined) => {
           this.itemBrowsers = thesaurus ? thesaurus.entries : undefined;
-        }
-      )
+        },
+      ),
     );
   }
 

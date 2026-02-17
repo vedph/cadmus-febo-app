@@ -26,6 +26,10 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2026-02-17:
+  - updated Angular and packages.
+  - ⚠️ replaced Leaflet with MapLibre.
+  - 🆕 added import facet and settings.
 - 2026-01-25: updated Angular and packages.
 - 2026-01-20: updated Angular and packages.
 - 2025-11-24:
