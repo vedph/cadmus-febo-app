@@ -25,13 +25,13 @@
     "@cisstech/nge": "^18.3.0",
     "@maplibre/ngx-maplibre-gl": "^21.0.2",
     "@myrmidon/auth-jwt-admin": "^8.0.3",
-    "@myrmidon/auth-jwt-login": "^8.0.4",
+    "@myrmidon/auth-jwt-login": "^8.0.5",
     "@myrmidon/cadmus-api": "^14.0.7",
     "@myrmidon/cadmus-core": "^12.0.3",
     "@myrmidon/cadmus-flags-pg": "^15.0.2",
     "@myrmidon/cadmus-flags-ui": "^15.0.2",
     "@myrmidon/cadmus-fr-epigraphy-ligatures": "^12.0.2",
-    "@myrmidon/cadmus-geo-location": "^0.0.4",
+    "@myrmidon/cadmus-geo-location": "^0.0.5",
     "@myrmidon/cadmus-graph-pg": "^15.0.2",
     "@myrmidon/cadmus-graph-pg-ex": "^16.0.1",
     "@myrmidon/cadmus-graph-ui": "^15.0.3",
@@ -94,7 +94,7 @@
     "@types/diff-match-patch": "^1.0.36",
     "@types/geojson": "^7946.0.16",
     "echarts": "^6.0.0",
-    "maplibre-gl": "^5.18.0",
+    "maplibre-gl": "^5.19.0",
     "marked": "^17.0.3",
     "monaco-editor": "^0.54.0",
     "ngx-echarts": "^21.0.0",
@@ -110,7 +110,7 @@
     "@angular/compiler-cli": "^21.1.5",
     "@angular/localize": "^21.1.5",
     "@types/jasmine": "~6.0.0",
-    "jasmine-core": "~6.0.1",
+    "jasmine-core": "~6.1.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.1",
@@ -119,7 +119,7 @@
     "typescript": "~5.9.3"
   },
   "optionalDependencies": {
-    "@rollup/rollup-win32-arm64-msvc": "^4.57.1"
+    "@rollup/rollup-win32-arm64-msvc": "^4.59.0"
   },
   "pnpm": {
     "overrides": {
