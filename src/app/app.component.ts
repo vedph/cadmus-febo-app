@@ -1,4 +1,11 @@
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  OnDestroy,
+  OnInit,
+  signal,
+} from '@angular/core';
 
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -43,14 +50,17 @@ import {
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit, OnDestroy {
   private _subs: Subscription[];
 
-  public user?: User;
-  public logged?: boolean;
-  public itemBrowsers?: ThesaurusEntry[];
-  public version: string;
+  public readonly user = signal<User | undefined>(undefined);
+  public readonly logged = signal<boolean>(false);
+  public readonly itemBrowsers = signal<ThesaurusEntry[] | undefined>(
+    undefined,
+  );
+  public readonly version = signal<string>('');
 
   constructor(
     @Inject('itemBrowserKeys')
@@ -66,7 +76,7 @@ export class AppComponent implements OnInit, OnDestroy {
     geonames: GeoNamesRefLookupService,
     whg: WhgRefLookupService,
   ) {
-    this.version = env.get('version') || '';
+    this.version.set(env.get('version') || '');
     this._subs = [];
 
     // configure external lookup for asserted composite IDs
@@ -111,13 +121,13 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    this.user = this._authService.currentUserValue || undefined;
-    this.logged = this.user !== null;
+    this.user.set(this._authService.currentUserValue || undefined);
+    this.logged.set(this.user() !== undefined);
 
     this._subs.push(
       this._authService.currentUser$.subscribe((user: User | null) => {
-        this.logged = this._authService.isAuthenticated(true);
-        this.user = user || undefined;
+        this.logged.set(this._authService.isAuthenticated(true));
+        this.user.set(user || undefined);
         if (user) {
           this._appRepository.load();
         }
@@ -127,7 +137,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this._subs.push(
       this._appRepository.itemBrowserThesaurus$.subscribe(
         (thesaurus: Thesaurus | undefined) => {
-          this.itemBrowsers = thesaurus ? thesaurus.entries : undefined;
+          this.itemBrowsers.set(thesaurus ? thesaurus.entries : undefined);
         },
       ),
     );
@@ -144,7 +154,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   public logout(): void {
-    if (!this.logged) {
+    if (!this.logged()) {
       return;
     }
     this._authService.logout().subscribe((_) => {

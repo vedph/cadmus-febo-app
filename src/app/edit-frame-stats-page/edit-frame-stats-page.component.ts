@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 
 import { EditFrameStatsComponent } from '@myrmidon/cadmus-statistics';
@@ -9,10 +9,11 @@ import { MatIcon } from '@angular/material/icon';
   imports: [MatCardModule, MatIcon, EditFrameStatsComponent],
   templateUrl: './edit-frame-stats-page.component.html',
   styleUrl: './edit-frame-stats-page.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EditFrameStatsPageComponent {
   public readonly startDate = signal<Date>(
-    new Date(new Date().setDate(new Date().getDate() - 7))
+    new Date(new Date().setDate(new Date().getDate() - 7)),
   );
   public readonly endDate = signal<Date>(new Date());
 

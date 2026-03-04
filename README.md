@@ -26,6 +26,10 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2026-03-04:
+  - updated packages.
+  - ⚠️ migrated to `OnPush`.
+
 ### 5.0.4
 
 - 2026-02-23: updated packages.
