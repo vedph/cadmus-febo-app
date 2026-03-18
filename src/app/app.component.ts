@@ -18,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 // myrmidon
 import { EnvService, RamStorageService } from '@myrmidon/ngx-tools';
 import { User, AuthJwtService, GravatarPipe } from '@myrmidon/auth-jwt-login';
+import { ThemeToggleComponent } from '@myrmidon/ngx-mat-tools';
 
 // bricks
 import { ViafRefLookupService } from '@myrmidon/cadmus-refs-viaf-lookup';
@@ -47,6 +48,7 @@ import {
     MatMenuModule,
     MatToolbarModule,
     GravatarPipe,
+    ThemeToggleComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
