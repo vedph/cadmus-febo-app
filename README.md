@@ -26,6 +26,7 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2026-03-19: removed `@myrmidon/cadmus-ui-pg`.
 - 2026-03-18:
   - 🆕 migrated shell app to M3 themes and added dark theme support to components.
   - updated Angular and packages.
