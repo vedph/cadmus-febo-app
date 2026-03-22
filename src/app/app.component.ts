@@ -11,6 +11,7 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatDivider } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -44,6 +45,7 @@ import {
     RouterModule,
     RouterOutlet,
     MatButtonModule,
+    MatDivider,
     MatIconModule,
     MatMenuModule,
     MatToolbarModule,

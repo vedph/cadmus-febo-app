@@ -12,14 +12,14 @@ footer {
   padding: 4px;
   text-align: center;
 }
+footer a {
+  color: var(--mat-sys-on-surface-variant);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 
 #logo {
   flex: 0 0 60px;
 }
-
-// mat-toolbar {
-//   background-color: #AC8E73;
-// }
-// mat-toolbar mat-icon {
-//   color: white;
-// }

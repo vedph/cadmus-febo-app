@@ -74,10 +74,17 @@
         <mat-menu #adminMenu>
           <a mat-menu-item routerLink="/manage-users">Manage users</a>
           <a mat-menu-item routerLink="/register-user">Register user</a>
-          <a mat-menu-item routerLink="/profile/facets"> Import facets </a>
-          <a mat-menu-item routerLink="/profile/settings"> Import settings </a>
+          <mat-divider />
           <a mat-menu-item routerLink="/flags"> Flags </a>
           <a mat-menu-item routerLink="/thesauri"> Thesauri </a>
+          <a mat-menu-item routerLink="/profile/facets"> Facets </a>
+          <mat-divider />
+          <a mat-menu-item routerLink="/profile/import/facets">
+            Import facets
+          </a>
+          <a mat-menu-item routerLink="/profile/import/settings">
+            Import settings
+          </a>
         </mat-menu>
       </div>
     }
@@ -95,7 +102,7 @@
       </button>
     }
 
-    <ngx-theme-toggle/>
+    <ngx-theme-toggle />
   </mat-toolbar>
 </header>
 
@@ -104,7 +111,7 @@
 </main>
 
 <footer>
-  <div layout="row" layout-align="center center">
+  <div>
     <p>
       Cadmus
       <a href="https://erc-febo.unitn.it/" target="_blank" rel="noopener"

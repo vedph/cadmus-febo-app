@@ -26,6 +26,9 @@ npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-
 
 ## History
 
+- 2026-03-22:
+  - 🆕 added facet editor, updating app routes and admin menus accordingly.
+  - updated Angular and packages.
 - 2026-03-19:
   - removed `@myrmidon/cadmus-ui-pg`.
   - updated Angular and packages.
