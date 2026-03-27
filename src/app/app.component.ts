@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   Inject,
   OnDestroy,
   OnInit,
@@ -66,13 +67,33 @@ export class AppComponent implements OnInit, OnDestroy {
   );
   public readonly version = signal<string>('');
 
+  public readonly branding = computed(() => {
+    switch (this._env.get('branding')) {
+      case 'staging':
+        return {
+          bg: 'var(--mat-sys-tertiary)',
+          text: 'var(--mat-sys-on-tertiary)',
+        };
+      case 'dev':
+        return {
+          bg: 'var(--mat-sys-error)',
+          text: 'var(--mat-sys-on-error)',
+        };
+      default: // Production
+        return {
+          bg: 'var(--mat-sys-primary)',
+          text: 'var(--mat-sys-on-primary)',
+        };
+    }
+  });
+
   constructor(
     @Inject('itemBrowserKeys')
     private _itemBrowserKeys: { [key: string]: string },
     private _authService: AuthJwtService,
     private _appRepository: AppRepository,
     private _router: Router,
-    env: EnvService,
+    private _env: EnvService,
     // lookup
     storage: RamStorageService,
     viaf: ViafRefLookupService,
@@ -80,7 +101,7 @@ export class AppComponent implements OnInit, OnDestroy {
     geonames: GeoNamesRefLookupService,
     whg: WhgRefLookupService,
   ) {
-    this.version.set(env.get('version') || '');
+    this.version.set(this._env.get('version') || '');
     this._subs = [];
 
     // configure external lookup for asserted composite IDs
