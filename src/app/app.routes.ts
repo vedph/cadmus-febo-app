@@ -142,15 +142,6 @@ export const routes: Routes = [
       ),
     canActivate: [jwtAdminGuard],
   },
-  // geography
-  {
-    path: 'items/:iid/geography',
-    loadChildren: () =>
-      import('@myrmidon/cadmus-part-geo-pg').then(
-        (module) => module.CADMUS_PART_GEO_PG_ROUTES,
-      ),
-    canActivate: [jwtGuard],
-  },
   // epigraphy
   {
     path: 'items/:iid/epigraphy',

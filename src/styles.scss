@@ -1,6 +1,5 @@
 @use "@angular/material" as mat;
 @import "preview-styles.css";
-@import "maplibre-gl/dist/maplibre-gl.css";
 
 // A theme object is still needed for mat.typography-hierarchy(), which
 // requires the internal structure produced by mat.define-theme().

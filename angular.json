@@ -32,7 +32,6 @@
             "styles": ["src/styles.scss"],
             "scripts": [],
             "allowedCommonJsDependencies": [
-              "maplibre-gl",
               "webcola",
               "dagre",
               "ngraph.forcelayout"
