@@ -2,7 +2,7 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
-- [models](https://github.com/vedph/cadmus-febo)
+- [core](https://github.com/vedph/cadmus-febo)
 - [API](https://github.com/vedph/cadmus-febo-api)
 
 ## Docker
@@ -10,22 +10,15 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 🐋 Quick Docker image build:
 
 1. update version in `env.js` and `ng build --configuration production`.
-2. `docker build . -t vedph2020/cadmus-febo-app:5.0.4 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
-
-## Notes
-
-When using MapboxGL ensure to apply patch for this [MapboxGL issue](https://github.com/Wykks/ngx-mapbox-gl/issues/410). This is no more the case as we are using leaflet.
-
-Packages specific to this project with reference to the Cadmus templates:
-
-```bash
-npm i @myrmidon/cadmus-refs-decorated-counts @myrmidon/cadmus-part-geo-asserted-locations @myrmidon/cadmus-part-geo-asserted-toponyms @myrmidon/cadmus-part-epigraphy-support @myrmidon/cadmus-part-epigraphy-writing @myrmidon/cadmus-part-epigraphy-formula-patterns @myrmidon/cadmus-fr-epigraphy-ligatures @myrmidon/cadmus-part-geo-pg @myrmidon/cadmus-part-epigraphy-pg
-```
-
-- [ngx-mapbox-gl](https://github.com/Wykks/ngx-mapbox-gl)
+2. `docker build . -t vedph2020/cadmus-febo-app:6.0.0 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## History
 
+### 6.0.0
+
+- 2026-03-27:
+  - ⚠️ gone zoneless.
+  - ⚠️ refactored profile, also removing geography and maplibre.
 - 2026-03-22:
   - 🆕 added facet editor, updating app routes and admin menus accordingly.
   - updated Angular and packages.
