@@ -47,7 +47,7 @@
     "@myrmidon/cadmus-part-epigraphy-support-frr": "^12.1.3",
     "@myrmidon/cadmus-part-epigraphy-technique": "^12.1.3",
     "@myrmidon/cadmus-part-general-pg": "^16.1.1",
-    "@myrmidon/cadmus-part-general-ui": "^16.1.4",
+    "@myrmidon/cadmus-part-general-ui": "^16.1.5",
     "@myrmidon/cadmus-part-philology-pg": "^16.2.1",
     "@myrmidon/cadmus-part-philology-ui": "^17.1.2",
     "@myrmidon/cadmus-preview-pg": "^17.1.0",
