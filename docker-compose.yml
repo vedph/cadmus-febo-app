@@ -50,7 +50,7 @@ services:
 
   # Cadmus febo app
   cadmus-febo-app:
-    image: vedph2020/cadmus-febo-app:6.0.1
+    image: vedph2020/cadmus-febo-app:6.0.3
     container_name: cadmus-febo-app
     ports:
       - 4200:80
