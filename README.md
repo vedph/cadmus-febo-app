@@ -10,9 +10,13 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 🐋 Quick Docker image build:
 
 1. update version in `env.js` and `ng build --configuration production`.
-2. `docker build . -t vedph2020/cadmus-febo-app:6.0.2 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
+2. `docker build . -t vedph2020/cadmus-febo-app:6.0.3 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## History
+
+### 6.0.3
+
+- 2026-03-30: updated packages (fix to item editor).
 
 ### 6.0.2
 

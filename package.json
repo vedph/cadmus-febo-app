@@ -33,7 +33,7 @@
     "@myrmidon/cadmus-graph-pg": "^15.1.0",
     "@myrmidon/cadmus-graph-pg-ex": "^16.1.0",
     "@myrmidon/cadmus-graph-ui": "^15.1.1",
-    "@myrmidon/cadmus-item-editor": "^16.1.4",
+    "@myrmidon/cadmus-item-editor": "^16.1.5",
     "@myrmidon/cadmus-item-list": "^16.1.2",
     "@myrmidon/cadmus-item-search": "^16.1.1",
     "@myrmidon/cadmus-mat-physical-grid": "^9.0.4",
@@ -109,7 +109,7 @@
     "typescript": "~5.9.3"
   },
   "optionalDependencies": {
-    "@rollup/rollup-win32-arm64-msvc": "^4.60.0"
+    "@rollup/rollup-win32-arm64-msvc": "^4.60.1"
   },
   "pnpm": {
     "overrides": {
