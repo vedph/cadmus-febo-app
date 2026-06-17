@@ -10,9 +10,15 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 🐋 Quick Docker image build:
 
 1. update version in `env.js` and `ng build --configuration production`.
-2. `docker build . -t vedph2020/cadmus-febo-app:6.0.5 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
+2. `docker build . -t vedph2020/cadmus-febo-app:6.0.6 -t vedph2020/cadmus-febo-app:latest` (replace with the current version).
 
 ## History
+
+### 6.0.6
+
+- 2026-06-17:
+  - ⚠️ migrated to [new Monaco wrapper](https://vedph.github.io/cadmus-doc/history/20260613-monaco.html).
+  - updated Angular and packages.
 
 ### 6.0.5
 
