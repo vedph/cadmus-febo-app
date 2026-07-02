@@ -9,7 +9,7 @@
     "test": "ng test"
   },
   "private": true,
-  "packageManager": "pnpm@11.7.0",
+  "packageManager": "pnpm@11.9.0",
   "dependencies": {
     "@angular/animations": "^22.0.1",
     "@angular/cdk": "^22.0.1",
@@ -23,8 +23,8 @@
     "@angular/router": "^22.0.1",
     "@auth0/angular-jwt": "^5.2.0",
     "@jean-merelis/ngx-monaco-editor": "^21.0.0",
-    "@myrmidon/auth-jwt-admin": "^9.0.0",
-    "@myrmidon/auth-jwt-login": "^9.0.0",
+    "@myrmidon/auth-jwt-admin": "^10.0.0",
+    "@myrmidon/auth-jwt-login": "^10.0.0",
     "@myrmidon/cadmus-api": "^15.0.0",
     "@myrmidon/cadmus-core": "^13.0.0",
     "@myrmidon/cadmus-flags-pg": "^16.0.0",
@@ -34,7 +34,7 @@
     "@myrmidon/cadmus-graph-pg-ex": "^17.0.0",
     "@myrmidon/cadmus-graph-ui": "^16.0.0",
     "@myrmidon/cadmus-item-editor": "^17.0.0",
-    "@myrmidon/cadmus-item-list": "^17.0.0",
+    "@myrmidon/cadmus-item-list": "^17.0.1",
     "@myrmidon/cadmus-item-search": "^17.0.0",
     "@myrmidon/cadmus-mat-physical-grid": "^10.0.0",
     "@myrmidon/cadmus-mat-physical-size": "^10.0.0",
@@ -79,7 +79,7 @@
     "@myrmidon/cadmus-thesaurus-list": "^17.0.0",
     "@myrmidon/cadmus-thesaurus-store": "^1.0.0",
     "@myrmidon/cadmus-thesaurus-ui": "^16.0.0",
-    "@myrmidon/cadmus-ui": "^17.0.0",
+    "@myrmidon/cadmus-ui": "^17.0.1",
     "@myrmidon/cadmus-ui-flag-set": "^10.0.0",
     "@myrmidon/cadmus-ui-note-set": "^12.0.0",
     "@myrmidon/ngx-mat-tools": "^2.0.0",
@@ -111,7 +111,7 @@
     "vitest": "^4.1.9"
   },
   "optionalDependencies": {
-    "@rollup/rollup-win32-arm64-msvc": "^4.62.0"
+    "@rollup/rollup-win32-arm64-msvc": "^4.62.2"
   },
   "pnpm": {
     "overrides": {
