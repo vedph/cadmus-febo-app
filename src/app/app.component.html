@@ -7,36 +7,99 @@
     <span id="logo"><img src="./img/febo-white-40.png" alt="FeBo" /></span>
     <a mat-button routerLink="/home">Cadmus</a>
 
-    <!-- items menu -->
-    @if (logged() && itemBrowsers()) {
-      <button type="button" mat-button [matMenuTriggerFor]="itemMenu">
-        Items
+    @if (!isMobile()) {
+      <!-- items menu -->
+      @if (logged() && itemBrowsers()) {
+        <button type="button" mat-button [matMenuTriggerFor]="itemMenu">
+          Items
+        </button>
+      }
+      <!-- item menu -->
+      @if (logged() && !itemBrowsers()) {
+        <button type="button" mat-button routerLink="/items">Items</button>
+      }
+      @if (logged()) {
+        <!-- search menu -->
+        <button type="button" mat-button routerLink="/search">Search</button>
+        <!-- graph menu -->
+        <!-- <button type="button" mat-button routerLink="/graph">Graph</button> -->
+        <!-- stats menu -->
+        <button type="button" mat-button routerLink="/stats">Stats</button>
+      }
+    }
+
+    @if (isMobile()) {
+      <!-- hamburger menu -->
+      <button
+        type="button"
+        mat-icon-button
+        [matMenuTriggerFor]="mobileMenu"
+        aria-label="Open menu"
+      >
+        <mat-icon>menu</mat-icon>
       </button>
     }
+
+    <!-- items menu content (shared by desktop button and mobile hamburger) -->
     <mat-menu #itemMenu>
       <a mat-menu-item routerLink="/items">Items</a>
-      @for (entry of itemBrowsers(); track entry) {
+      @for (entry of itemBrowsers(); track entry.id) {
         <a
           mat-menu-item
           [routerLink]="'item-browser/' + getItemBrowserRoute(entry.id)"
-        ></a>
+          >{{ entry.value }}</a
+        >
       }
     </mat-menu>
-    <!-- item menu -->
-    @if (logged() && !itemBrowsers()) {
-      <button type="button" mat-button routerLink="/items">Items</button>
-    }
 
-    <!-- search menu -->
-    @if (logged()) {
-      <button type="button" mat-button routerLink="/search">Search</button>
-      <!-- stats menu -->
-      <button type="button" mat-button routerLink="/stats">Stats</button>
-    }
-    <!-- graph menu -->
-    <!-- <button type="button" mat-button routerLink="/graph" *ngIf="logged">
-    Graph
-  </button> -->
+    <!-- user menu content (shared by desktop button and mobile hamburger) -->
+    <mat-menu #userMenu>
+      <a mat-menu-item routerLink="/reset-password">Reset password</a>
+    </mat-menu>
+
+    <!-- admin menu content (shared by desktop button and mobile hamburger) -->
+    <mat-menu #adminMenu>
+      <a mat-menu-item routerLink="/manage-users">Manage users</a>
+      <a mat-menu-item routerLink="/register-user">Register user</a>
+      <mat-divider />
+      <a mat-menu-item routerLink="/hints"> Hints </a>
+      <a mat-menu-item routerLink="/flags"> Flags </a>
+      <a mat-menu-item routerLink="/thesauri"> Thesauri </a>
+      <a mat-menu-item routerLink="/profile/facets"> Facets </a>
+      <mat-divider />
+      <a mat-menu-item routerLink="/profile/import/facets"> Import facets </a>
+      <a mat-menu-item routerLink="/profile/import/settings">
+        Import settings
+      </a>
+    </mat-menu>
+
+    <!-- hamburger menu, grouping most navigation for small viewports -->
+    <mat-menu #mobileMenu>
+      @if (logged() && itemBrowsers()) {
+        <button type="button" mat-menu-item [matMenuTriggerFor]="itemMenu">
+          Items
+        </button>
+      }
+      @if (logged() && !itemBrowsers()) {
+        <a mat-menu-item routerLink="/items">Items</a>
+      }
+      @if (logged()) {
+        <a mat-menu-item routerLink="/search">Search</a>
+        <!-- <a mat-menu-item routerLink="/graph">Graph</a> -->
+        <a mat-menu-item routerLink="/stats">Stats</a>
+      }
+      @if (user()) {
+        <mat-divider />
+        <button type="button" mat-menu-item [matMenuTriggerFor]="userMenu">
+          User
+        </button>
+        @if (user()!.roles.includes("admin")) {
+          <button type="button" mat-menu-item [matMenuTriggerFor]="adminMenu">
+            Admin
+          </button>
+        }
+      }
+    </mat-menu>
 
     <span class="tb-fill-remaining-space"></span>
 
@@ -55,52 +118,40 @@
         @if (user() && !user()!.emailConfirmed) {
           <mat-icon
             class="small-icon"
-            title="You must verify your email address! Please check your mailbox "
+            title="You must verify your email address! Please check your mailbox {{
+              user()!.email
+            }}"
             >feedback</mat-icon
           >
         }
-        <!-- <button mat-icon-button [mat-menu-trigger-for]="menu">
-          <mat-icon>more_vert</mat-icon>
-        </button> -->
-        <!-- user menu -->
-        <button type="button" mat-button [matMenuTriggerFor]="userMenu">
-          User
-        </button>
-        <mat-menu #userMenu>
-          <a mat-menu-item routerLink="/reset-password">Reset password</a>
-        </mat-menu>
-        <!-- admin menu -->
-        @if (user() && user()!.roles.includes("admin")) {
-          <button type="button" mat-button [matMenuTriggerFor]="adminMenu">
-            Admin
+        @if (!isMobile()) {
+          <!-- user menu -->
+          <button type="button" mat-button [matMenuTriggerFor]="userMenu">
+            User
           </button>
+          <!-- admin menu -->
+          @if (user() && user()!.roles.includes("admin")) {
+            <button type="button" mat-button [matMenuTriggerFor]="adminMenu">
+              Admin
+            </button>
+          }
         }
-        <mat-menu #adminMenu>
-          <a mat-menu-item routerLink="/manage-users">Manage users</a>
-          <a mat-menu-item routerLink="/register-user">Register user</a>
-          <mat-divider />
-          <a mat-menu-item routerLink="/flags"> Flags </a>
-          <a mat-menu-item routerLink="/thesauri"> Thesauri </a>
-          <a mat-menu-item routerLink="/profile/facets"> Facets </a>
-          <mat-divider />
-          <a mat-menu-item routerLink="/profile/import/facets">
-            Import facets
-          </a>
-          <a mat-menu-item routerLink="/profile/import/settings">
-            Import settings
-          </a>
-        </mat-menu>
       </div>
     }
 
     <!-- login -->
     @if (!logged()) {
-      <button type="button" mat-icon-button routerLink="/login">
+      <button
+        type="button"
+        mat-icon-button
+        [routerLink]="['/login']"
+        [queryParams]="{ returnUrl: 'items' }"
+      >
         <mat-icon>login</mat-icon>
       </button>
     }
     <!-- logout -->
-    @else {
+    @if (logged()) {
       <button type="button" mat-icon-button (click)="logout()">
         <mat-icon>logout</mat-icon>
       </button>

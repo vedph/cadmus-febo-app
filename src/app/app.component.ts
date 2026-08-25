@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  inject,
   Inject,
   OnDestroy,
   OnInit,
@@ -11,6 +12,7 @@ import {
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDivider } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
@@ -59,7 +61,9 @@ import {
 })
 export class AppComponent implements OnInit, OnDestroy {
   private _subs: Subscription[];
+  private readonly _bo = inject(BreakpointObserver);
 
+  public readonly isMobile = signal<boolean>(false);
   public readonly user = signal<User | undefined>(undefined);
   public readonly logged = signal<boolean>(false);
   public readonly itemBrowsers = signal<ThesaurusEntry[] | undefined>(
@@ -103,6 +107,10 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {
     this.version.set(this._env.get('version') || '');
     this._subs = [];
+
+    this._bo
+      .observe([Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((res) => this.isMobile.set(res.matches));
 
     // configure external lookup for asserted composite IDs
     storage.store(LOOKUP_CONFIGS_KEY, [
