@@ -13,3 +13,6 @@ minimumReleaseAgeExclude:
   - '@myrmidon/cadmus-item-list@17.0.1'
   - '@myrmidon/cadmus-ui@17.0.1'
   - '@rollup/rollup-win32-arm64-msvc@4.63.0'
+  - '@vitest/mocker@5.0.1'
+  - '@vitest/spy@5.0.1'
+  - vitest@5.0.1
