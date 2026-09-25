@@ -1,5 +1,6 @@
 # History
 
+- 2026-09-25: updated Angular and packages.
 - 2026-09-15: updated packages.
 
 ## 6.0.8

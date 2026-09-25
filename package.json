@@ -9,18 +9,18 @@
     "test": "ng test"
   },
   "private": true,
-  "packageManager": "pnpm@12.4.2",
+  "packageManager": "pnpm@12.6.0",
   "dependencies": {
-    "@angular/animations": "^22.0.1",
-    "@angular/cdk": "^22.0.1",
-    "@angular/common": "^22.0.1",
-    "@angular/compiler": "^22.0.1",
-    "@angular/core": "^22.0.1",
-    "@angular/forms": "^22.0.1",
-    "@angular/material": "^22.0.1",
-    "@angular/platform-browser": "^22.0.1",
-    "@angular/platform-browser-dynamic": "^22.0.1",
-    "@angular/router": "^22.0.1",
+    "@angular/animations": "^22.2.0",
+    "@angular/cdk": "^22.2.0",
+    "@angular/common": "^22.2.0",
+    "@angular/compiler": "^22.2.0",
+    "@angular/core": "^22.2.0",
+    "@angular/forms": "^22.2.0",
+    "@angular/material": "^22.2.0",
+    "@angular/platform-browser": "^22.2.0",
+    "@angular/platform-browser-dynamic": "^22.2.0",
+    "@angular/router": "^22.2.0",
     "@auth0/angular-jwt": "^5.2.0",
     "@jean-merelis/ngx-monaco-editor": "^21.0.0",
     "@myrmidon/auth-jwt-admin": "^10.0.0",
@@ -47,7 +47,7 @@
     "@myrmidon/cadmus-part-epigraphy-support-frr": "^13.0.0",
     "@myrmidon/cadmus-part-epigraphy-technique": "^13.0.0",
     "@myrmidon/cadmus-part-general-pg": "^18.0.1",
-    "@myrmidon/cadmus-part-general-ui": "^18.0.2",
+    "@myrmidon/cadmus-part-general-ui": "^18.0.3",
     "@myrmidon/cadmus-part-philology-pg": "^18.0.1",
     "@myrmidon/cadmus-part-philology-ui": "^19.0.2",
     "@myrmidon/cadmus-preview-pg": "^18.0.1",
@@ -65,7 +65,7 @@
     "@myrmidon/cadmus-refs-external-ids": "^11.0.2",
     "@myrmidon/cadmus-refs-geonames-lookup": "^11.0.2",
     "@myrmidon/cadmus-refs-historical-date": "^10.0.2",
-    "@myrmidon/cadmus-refs-lookup": "^11.0.4",
+    "@myrmidon/cadmus-refs-lookup": "^11.0.6",
     "@myrmidon/cadmus-refs-proper-name": "^11.0.2",
     "@myrmidon/cadmus-refs-viaf-lookup": "^11.0.2",
     "@myrmidon/cadmus-refs-whg-lookup": "^11.0.2",
@@ -86,7 +86,7 @@
     "@myrmidon/ngx-tools": "^3.0.2",
     "@myrmidon/paged-data-browsers": "^6.0.1",
     "echarts": "^6.1.0",
-    "marked": "^18.0.13",
+    "marked": "^18.0.14",
     "monaco-editor": "^0.47.0",
     "ngx-echarts": "^22.0.0",
     "ngx-markdown": "^22.0.2",
@@ -95,10 +95,10 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^22.0.2",
-    "@angular/cli": "^22.0.2",
-    "@angular/compiler-cli": "^22.0.1",
-    "@angular/localize": "^22.0.1",
+    "@angular/build": "^22.2.0",
+    "@angular/cli": "^22.2.0",
+    "@angular/compiler-cli": "^22.2.0",
+    "@angular/localize": "^22.2.0",
     "@types/jasmine": "~6.0.0",
     "istanbul-lib-instrument": "^6.0.3",
     "jasmine-core": "~7.0.2",
@@ -111,7 +111,7 @@
     "vitest": "^5.0.1"
   },
   "optionalDependencies": {
-    "@rollup/rollup-win32-arm64-msvc": "^4.63.3"
+    "@rollup/rollup-win32-arm64-msvc": "^4.63.5"
   },
   "pnpm": {
     "overrides": {
