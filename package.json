@@ -9,18 +9,18 @@
     "test": "ng test"
   },
   "private": true,
-  "packageManager": "pnpm@12.11.2",
+  "packageManager": "pnpm@12.14.0",
   "dependencies": {
-    "@angular/animations": "^22.2.2",
-    "@angular/cdk": "^22.2.2",
-    "@angular/common": "^22.2.2",
-    "@angular/compiler": "^22.2.2",
-    "@angular/core": "^22.2.2",
-    "@angular/forms": "^22.2.2",
-    "@angular/material": "^22.2.2",
-    "@angular/platform-browser": "^22.2.2",
-    "@angular/platform-browser-dynamic": "^22.2.2",
-    "@angular/router": "^22.2.2",
+    "@angular/animations": "^22.2.3",
+    "@angular/cdk": "^22.2.3",
+    "@angular/common": "^22.2.3",
+    "@angular/compiler": "^22.2.3",
+    "@angular/core": "^22.2.3",
+    "@angular/forms": "^22.2.3",
+    "@angular/material": "^22.2.3",
+    "@angular/platform-browser": "^22.2.3",
+    "@angular/platform-browser-dynamic": "^22.2.3",
+    "@angular/router": "^22.2.3",
     "@auth0/angular-jwt": "^5.2.0",
     "@jean-merelis/ngx-monaco-editor": "^21.0.0",
     "@myrmidon/auth-jwt-admin": "^10.0.0",
@@ -56,7 +56,7 @@
     "@myrmidon/cadmus-profile-editor": "^20.0.0",
     "@myrmidon/cadmus-profile-import": "^20.0.0",
     "@myrmidon/cadmus-refs-asserted-chronotope": "^12.0.3",
-    "@myrmidon/cadmus-refs-asserted-ids": "^11.0.7",
+    "@myrmidon/cadmus-refs-asserted-ids": "^11.0.8",
     "@myrmidon/cadmus-refs-assertion": "^11.0.6",
     "@myrmidon/cadmus-refs-dbpedia-lookup": "^12.0.3",
     "@myrmidon/cadmus-refs-decorated-counts": "^10.0.3",
@@ -72,7 +72,7 @@
     "@myrmidon/cadmus-state": "^20.0.0",
     "@myrmidon/cadmus-statistics": "^20.0.0",
     "@myrmidon/cadmus-text-block-view": "^10.0.3",
-    "@myrmidon/cadmus-text-ed": "^11.0.3",
+    "@myrmidon/cadmus-text-ed": "^11.0.4",
     "@myrmidon/cadmus-text-ed-md": "^12.0.4",
     "@myrmidon/cadmus-text-ed-txt": "^11.0.3",
     "@myrmidon/cadmus-thesaurus-editor": "^20.0.0",
@@ -89,16 +89,16 @@
     "marked": "^18.1.1",
     "monaco-editor": "^0.47.0",
     "ngx-echarts": "^22.0.0",
-    "ngx-markdown": "^22.1.0",
+    "ngx-markdown": "^22.1.1",
     "rxjs": "~7.8.0",
     "ts-md5": "^2.0.1",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^22.2.2",
-    "@angular/cli": "^22.2.2",
-    "@angular/compiler-cli": "^22.2.2",
-    "@angular/localize": "^22.2.2",
+    "@angular/build": "^22.2.3",
+    "@angular/cli": "^22.2.3",
+    "@angular/compiler-cli": "^22.2.3",
+    "@angular/localize": "^22.2.3",
     "@types/jasmine": "~7.0.0",
     "istanbul-lib-instrument": "^6.0.3",
     "jasmine-core": "~7.0.2",
@@ -108,10 +108,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.3.0",
     "typescript": "~6.0.3",
-    "vitest": "^5.0.4"
+    "vitest": "^5.0.5"
   },
   "optionalDependencies": {
-    "@rollup/rollup-win32-arm64-msvc": "^4.64.7"
+    "@rollup/rollup-win32-arm64-msvc": "^4.64.12"
   },
   "pnpm": {
     "overrides": {
