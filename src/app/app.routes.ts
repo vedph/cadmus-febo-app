@@ -62,6 +62,14 @@ export const routes: Routes = [
       ),
     canActivate: [jwtGuard],
   },
+  {
+    path: 'items/:id/history',
+    loadComponent: () =>
+      import('@myrmidon/cadmus-ui-history').then(
+        (module) => module.ItemHistoryPageComponent,
+      ),
+    canActivate: [jwtGuard],
+  },
   // cadmus - thesauri
   {
     path: 'thesauri/:id',
@@ -83,16 +91,22 @@ export const routes: Routes = [
   {
     path: 'items/:iid/general',
     loadChildren: () =>
-      import('@myrmidon/cadmus-part-general-pg').then(
-        (module) => module.CADMUS_PART_GENERAL_PG_ROUTES,
+      Promise.all([
+        import('@myrmidon/cadmus-part-general-pg'),
+        import('@myrmidon/cadmus-ui-history'),
+      ]).then(([module, history]) =>
+        history.withHistoryRoutes(module.CADMUS_PART_GENERAL_PG_ROUTES),
       ),
     canActivate: [jwtGuard],
   },
   {
     path: 'items/:iid/philology',
     loadChildren: () =>
-      import('@myrmidon/cadmus-part-philology-pg').then(
-        (module) => module.CADMUS_PART_PHILOLOGY_PG_ROUTES,
+      Promise.all([
+        import('@myrmidon/cadmus-part-philology-pg'),
+        import('@myrmidon/cadmus-ui-history'),
+      ]).then(([module, history]) =>
+        history.withHistoryRoutes(module.CADMUS_PART_PHILOLOGY_PG_ROUTES),
       ),
     canActivate: [jwtGuard],
   },

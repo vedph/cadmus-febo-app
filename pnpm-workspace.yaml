@@ -17,3 +17,5 @@ minimumReleaseAgeExclude:
   - '@vitest/spy@5.0.1'
   - vitest@5.0.1
   - marked@18.1.0
+  - '@myrmidon/cadmus-ui-diff@0.0.1'
+  - '@myrmidon/cadmus-ui-history@0.0.1'

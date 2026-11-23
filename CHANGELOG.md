@@ -1,5 +1,9 @@
 # History
 
+- 2026-11-23:
+  - updated Angular and packages.
+  - 🆕 opted into history in editor.
+  - 🆕 opted into help links.
 - 2026-10-25: updated Angular and packages.
 - 2026-10-24: reset password page fix.
 - 2026-10-20: updated Angular and packages.
